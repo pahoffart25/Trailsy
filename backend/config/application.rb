@@ -8,21 +8,20 @@ require "active_record/railtie"
 require "active_storage/engine"
 require "action_controller/railtie"
 require "action_mailer/railtie"
-require "action_mailbox/engine"
-require "action_text/engine"
 require "action_view/railtie"
 require "action_cable/engine"
 # require "sprockets/railtie"
-# require "rails/test_unit/railtie"
+require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Backend
+
+module TrailsyBackend
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.0
+    config.load_defaults 5.2
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
@@ -34,4 +33,20 @@ module Backend
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
   end
+  config_files = ["secrets.yml"]
+    # config_files.each do | file_name |
+    #   file_path = File.join(Rails.root, "config", file_name)
+    #   config_keys = HashWithIndifferentAccess.new(YAML.safe_load(IO.read(file_path)))[Rails.env]
+    #   config_keys.each do | k, v |
+    #     ENV[k.upcase] ||= v 
+    #   end
+    # end 
+
+    config_files.each do |file_name|
+      file_path = File.join(Rails.root, 'config', file_name)
+      config_keys = HashWithIndifferentAccess.new(YAML.safe_load(IO.read(file_path)))[Rails.env]
+      config_keys.each do |k, v|
+        ENV[k.upcase] ||= v
+      end
+    end
 end
