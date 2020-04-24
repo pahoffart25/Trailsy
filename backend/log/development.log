@@ -2004,3 +2004,1606 @@ Migrating to CreateDestinations (20200423152618)
   ↳ db/seeds.rb:165
   [1m[36mTrail Load (0.4ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" LIMIT $1[0m  [["LIMIT", 11]]
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (47.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "trailsy-backend_development"[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (44.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "trailsy-backend_test"[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (243.5ms)[0m  [1m[35mCREATE DATABASE "trailsy-backend_development" ENCODING = 'unicode'[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (74.4ms)[0m  [1m[35mCREATE DATABASE "trailsy-backend_test" ENCODING = 'unicode'[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (18.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2486317849142248485)[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateUsers (20200423151605)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "password_digest" character varying, "bio" character varying, "profile_picture" character varying DEFAULT 'default', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200423151605_create_users.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (2.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200423151605"]]
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateTrails (20200423152424)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "trails" ("id" bigserial primary key, "api_index" integer, "name" character varying, "summary" text, "difficulty" character varying, "stars" float, "url" character varying, "imgSmallMed" character varying, "imgMedium" character varying, "location" character varying, "length" float, "longitude" float, "latitude" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200423152424_create_trails.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200423152424"]]
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateTrips (20200423152527)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "trips" ("id" bigserial primary key, "user_id" integer, "title" text, "description" text, "location" text, "stars" float, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200423152527_create_trips.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200423152527"]]
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateFollows (20200423152549)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "follows" ("id" bigserial primary key, "user_id" bigint, "followed_user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200423152549_create_follows.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_follows_on_user_id" ON "follows"  ("user_id")[0m
+  ↳ db/migrate/20200423152549_create_follows.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_follows_on_followed_user_id" ON "follows"  ("followed_user_id")[0m
+  ↳ db/migrate/20200423152549_create_follows.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_follows_on_user_id_and_followed_user_id" ON "follows"  ("user_id", "followed_user_id")[0m
+  ↳ db/migrate/20200423152549_create_follows.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200423152549"]]
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateDestinations (20200423152618)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "destinations" ("id" bigserial primary key, "trek_type" character varying, "trek_id" bigint, "trail_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200423152618_create_destinations.rb:3
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_destinations_on_trek_type_and_trek_id" ON "destinations"  ("trek_type", "trek_id")[0m
+  ↳ db/migrate/20200423152618_create_destinations.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200423152618"]]
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-04-23 20:05:50.849879"], ["updated_at", "2020-04-23 20:05:50.849879"]]
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2486317849142248485)[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paulhoffart/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mDestination Load (4.2ms)[0m  [1m[34mSELECT "destinations".* FROM "destinations"[0m
+  ↳ db/seeds.rb:2
+  [1m[36mFollow Load (4.6ms)[0m  [1m[34mSELECT "follows".* FROM "follows"[0m
+  ↳ db/seeds.rb:3
+  [1m[36mTrail Load (2.5ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:4
+  [1m[36mTrip Load (2.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:5
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:6
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "profile_picture", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Philip"], ["email", "philip@planetexpress.com"], ["password_digest", "$2a$12$a2MuQ5XAyYXclPF8u2VRx.uPTpVcinXzoepIDVa0qyzYoUSPm8bvq"], ["profile_picture", "https://avatars3.githubusercontent.com/u/7104822?s=460&u=4c216cc65279ba46e09c56749057471cba8457c4&v=4"], ["created_at", "2020-04-23 20:05:56.834442"], ["updated_at", "2020-04-23 20:05:56.834442"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "profile_picture", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bender"], ["email", "bender@planetexpress.com"], ["password_digest", "$2a$12$.3rvorW3FP7QJXUjciLCJusZMcKmTbVgSxZqYY2YycaZdfUBUJKdW"], ["profile_picture", "https://vignette.wikia.nocookie.net/en.futurama/images/4/43/Bender.png/revision/latest?cb=20150206072725"], ["created_at", "2020-04-23 20:05:57.039933"], ["updated_at", "2020-04-23 20:05:57.039933"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "profile_picture", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Amy"], ["email", "amy@planetexpress.com"], ["password_digest", "$2a$12$prn4QxlOhAk3IaiApQ623uPvfw5DycRevDr7noIMOY9xa/FnUjhoq"], ["profile_picture", "https://vignette.wikia.nocookie.net/en.futurama/images/9/94/AmyWong.png/revision/latest?cb=20170123190854"], ["created_at", "2020-04-23 20:05:57.247850"], ["updated_at", "2020-04-23 20:05:57.247850"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "profile_picture", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Leela"], ["email", "leela@planetexpress.com"], ["password_digest", "$2a$12$cOPXDoPdxG0MBt6It/bKU.qYr1JRvUrNveA85hOqCX1QYVXpB3DAW"], ["profile_picture", "https://vignette.wikia.nocookie.net/en.futurama/images/d/d4/Turanga_Leela.png/revision/latest?cb=20150218013044"], ["created_at", "2020-04-23 20:05:57.454704"], ["updated_at", "2020-04-23 20:05:57.454704"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "profile_picture", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Farnsworth"], ["email", "farnsworth@planetexpress.com"], ["password_digest", "$2a$12$h9IuSrhKD.ZN90uAtetN0u5CsQpHhVwy3qHwlnukhIfOA2lgXWaAe"], ["profile_picture", "https://vignette.wikia.nocookie.net/en.futurama/images/4/4e/Farnsworth.png/revision/latest?cb=20110710094500"], ["created_at", "2020-04-23 20:05:57.658056"], ["updated_at", "2020-04-23 20:05:57.658056"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "profile_picture", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Hermes"], ["email", "hermes@planetexpress.com"], ["password_digest", "$2a$12$Aai/2/qhC5YsITMeIngj8ODC6fSzaSJsLnID.brHeOnFWUS9JidCK"], ["profile_picture", "https://vignette.wikia.nocookie.net/en.futurama/images/0/0d/Hermes.png/revision/latest?cb=20170719011119"], ["created_at", "2020-04-23 20:05:57.864028"], ["updated_at", "2020-04-23 20:05:57.864028"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "profile_picture", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Zoidberg"], ["email", "zoidberg@planetexpress.com"], ["password_digest", "$2a$12$7dnwU5d2exwv.l.7SItfMeoVwAYRYjVvHkQ.bJCsdma7YkVf9D1gi"], ["profile_picture", "https://vignette.wikia.nocookie.net/en.futurama/images/4/45/Dr._John_A._Zoidberg.png/revision/latest?cb=20101014052403"], ["created_at", "2020-04-23 20:05:58.076473"], ["updated_at", "2020-04-23 20:05:58.076473"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "profile_picture", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Zapp"], ["email", "zapp@planetexpress.com"], ["password_digest", "$2a$12$gSsQALUzTxk39M7QKB8bk.S4ATfrn1Rr1mPGAkjegEtcnGEkLW9iC"], ["profile_picture", "https://vignette.wikia.nocookie.net/en.futurama/images/e/e9/Zapp_Brannigan.png/revision/latest?cb=20101013084300"], ["created_at", "2020-04-23 20:05:58.280270"], ["updated_at", "2020-04-23 20:05:58.280270"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "profile_picture", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Kif"], ["email", "kif@planetexpress.com"], ["password_digest", "$2a$12$uO7a5OP1SZlnEG2Fefx22.2JRN281vXVI1zc0dJ5YnIufPFV7DsRi"], ["profile_picture", "https://vignette.wikia.nocookie.net/en.futurama/images/8/82/Lieutenant_Kif_Kroker.png/revision/latest?cb=20101013084718"], ["created_at", "2020-04-23 20:05:58.486283"], ["updated_at", "2020-04-23 20:05:58.486283"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "profile_picture", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Calculon"], ["email", "calculon@planetexpress.com"], ["password_digest", "$2a$12$4HwSkp1PpmBMFv91plmOaOgG1EOrs0kR3Or1mw.7Ik/eObllCautS"], ["profile_picture", "https://vignette.wikia.nocookie.net/en.futurama/images/b/b3/Calculon-2.JPG/revision/latest/scale-to-width-down/700?cb=20090604015557"], ["created_at", "2020-04-23 20:05:58.688852"], ["updated_at", "2020-04-23 20:05:58.688852"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "profile_picture", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Slurms"], ["email", "slurms@planetexpress.com"], ["password_digest", "$2a$12$.xxIT0l/hVYAHvRjRQzrt.DNw/6Tj02y/vi01e6mhoiMzjTXVC3Tm"], ["profile_picture", "https://vignette.wikia.nocookie.net/en.futurama/images/8/80/Slurm-1-.jpg/revision/latest?cb=20060626052801"], ["created_at", "2020-04-23 20:05:58.891494"], ["updated_at", "2020-04-23 20:05:58.891494"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "profile_picture", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Nibbler"], ["email", "nibbler@planetexpress.com"], ["password_digest", "$2a$12$JoKFJyy/.3iHitGAlPAWn.8sgp4ZZFnrF1MCqFxsWORc1EU.B5Jaa"], ["profile_picture", "https://vignette.wikia.nocookie.net/en.futurama/images/2/26/Lord_Nibbler.png/revision/latest?cb=20101013083936"], ["created_at", "2020-04-23 20:05:59.095137"], ["updated_at", "2020-04-23 20:05:59.095137"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "profile_picture", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Donbot"], ["email", "donbot@planetexpress.com"], ["password_digest", "$2a$12$MFXqYU/iWCsJyS7tFGiNhOhFFxBvY5j0xst8sL2jLsU.PaOARsA4G"], ["profile_picture", "https://vignette.wikia.nocookie.net/en.futurama/images/1/13/Donbot.jpg/revision/latest?cb=20080112205318"], ["created_at", "2020-04-23 20:05:59.298733"], ["updated_at", "2020-04-23 20:05:59.298733"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mFollow Create (0.8ms)[0m  [1m[32mINSERT INTO "follows" ("user_id", "followed_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 13], ["followed_user_id", 2], ["created_at", "2020-04-23 20:05:59.313302"], ["updated_at", "2020-04-23 20:05:59.313302"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:36
+  [1m[36mFollow Create (0.4ms)[0m  [1m[32mINSERT INTO "follows" ("user_id", "followed_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["followed_user_id", 13], ["created_at", "2020-04-23 20:05:59.316829"], ["updated_at", "2020-04-23 20:05:59.316829"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mFollow Create (1.2ms)[0m  [1m[32mINSERT INTO "follows" ("user_id", "followed_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["followed_user_id", 9], ["created_at", "2020-04-23 20:05:59.319156"], ["updated_at", "2020-04-23 20:05:59.319156"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mFollow Create (0.3ms)[0m  [1m[32mINSERT INTO "follows" ("user_id", "followed_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 9], ["followed_user_id", 3], ["created_at", "2020-04-23 20:05:59.323308"], ["updated_at", "2020-04-23 20:05:59.323308"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mFollow Create (0.2ms)[0m  [1m[32mINSERT INTO "follows" ("user_id", "followed_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 12], ["followed_user_id", 11], ["created_at", "2020-04-23 20:05:59.327094"], ["updated_at", "2020-04-23 20:05:59.327094"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:40
+  [1m[36mFollow Create (0.7ms)[0m  [1m[32mINSERT INTO "follows" ("user_id", "followed_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 11], ["followed_user_id", 12], ["created_at", "2020-04-23 20:05:59.329111"], ["updated_at", "2020-04-23 20:05:59.329111"]]
+  ↳ db/seeds.rb:40
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:41
+  [1m[36mFollow Create (0.2ms)[0m  [1m[32mINSERT INTO "follows" ("user_id", "followed_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 8], ["followed_user_id", 10], ["created_at", "2020-04-23 20:05:59.332952"], ["updated_at", "2020-04-23 20:05:59.332952"]]
+  ↳ db/seeds.rb:41
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:41
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mFollow Create (0.9ms)[0m  [1m[32mINSERT INTO "follows" ("user_id", "followed_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 10], ["followed_user_id", 8], ["created_at", "2020-04-23 20:05:59.336194"], ["updated_at", "2020-04-23 20:05:59.336194"]]
+  ↳ db/seeds.rb:42
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mFollow Create (0.2ms)[0m  [1m[32mINSERT INTO "follows" ("user_id", "followed_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 7], ["followed_user_id", 6], ["created_at", "2020-04-23 20:05:59.339824"], ["updated_at", "2020-04-23 20:05:59.339824"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFollow Create (0.9ms)[0m  [1m[32mINSERT INTO "follows" ("user_id", "followed_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 6], ["followed_user_id", 7], ["created_at", "2020-04-23 20:05:59.342987"], ["updated_at", "2020-04-23 20:05:59.342987"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mFollow Create (0.2ms)[0m  [1m[32mINSERT INTO "follows" ("user_id", "followed_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 4], ["followed_user_id", 5], ["created_at", "2020-04-23 20:05:59.345790"], ["updated_at", "2020-04-23 20:05:59.345790"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:46
+  [1m[36mFollow Create (0.2ms)[0m  [1m[32mINSERT INTO "follows" ("user_id", "followed_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["followed_user_id", 4], ["created_at", "2020-04-23 20:05:59.348995"], ["updated_at", "2020-04-23 20:05:59.348995"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mFollow Create (0.5ms)[0m  [1m[32mINSERT INTO "follows" ("user_id", "followed_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["followed_user_id", 2], ["created_at", "2020-04-23 20:05:59.351664"], ["updated_at", "2020-04-23 20:05:59.351664"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:48
+  [1m[36mFollow Create (0.2ms)[0m  [1m[32mINSERT INTO "follows" ("user_id", "followed_user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["followed_user_id", 1], ["created_at", "2020-04-23 20:05:59.353693"], ["updated_at", "2020-04-23 20:05:59.353693"]]
+  ↳ db/seeds.rb:48
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mTrail Create (1.6ms)[0m  [1m[32mINSERT INTO "trails" ("api_index", "name", "summary", "difficulty", "stars", "url", "imgSmallMed", "imgMedium", "location", "length", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["api_index", 7021422], ["name", "East Palisades Route"], ["summary", "A lovely hike including sweeping views of the Chattahoochee and a hidden gem - a bamboo forest!"], ["difficulty", "greenBlue"], ["stars", 4.4], ["url", "https://www.hikingproject.com/trail/7021422/east-palisades-route"], ["imgSmallMed", "https://cdn-files.apstatic.com/hike/7023297_smallMed_1554844842.jpg"], ["imgMedium", "https://cdn-files.apstatic.com/hike/7023297_smallMed_1554844842.jpg"], ["location", "Vinings, Georgia"], ["length", 4.2], ["longitude", -84.442], ["latitude", 33.8784], ["created_at", "2020-04-23 20:05:59.380437"], ["updated_at", "2020-04-23 20:05:59.380437"]]
+  ↳ db/seeds.rb:65
+  [1m[35m (10.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mTrail Create (0.5ms)[0m  [1m[32mINSERT INTO "trails" ("api_index", "name", "summary", "difficulty", "stars", "url", "imgSmallMed", "imgMedium", "location", "length", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["api_index", 7045614], ["name", "Beltline Eastside Trail: Piedmont Park to Krog Street Market"], ["summary", "A 5-mile romp through some of Atlanta's best spots for both green spaces and urban culture."], ["difficulty", "green"], ["stars", 4.5], ["url", "https://www.hikingproject.com/trail/7045614/beltline-eastside-trail-piedmont-park-to-krog-street-market"], ["imgSmallMed", "https://cdn-files.apstatic.com/hike/7047531_smallMed_1555537277.jpg"], ["imgMedium", "https://cdn-files.apstatic.com/hike/7047531_medium_1555537277.jpg"], ["location", "Druid Hills, Georgia"], ["length", 6.2], ["longitude", -84.3685], ["latitude", 33.7819], ["created_at", "2020-04-23 20:05:59.395014"], ["updated_at", "2020-04-23 20:05:59.395014"]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:95
+  [1m[36mTrail Create (0.4ms)[0m  [1m[32mINSERT INTO "trails" ("api_index", "name", "summary", "difficulty", "stars", "url", "imgSmallMed", "imgMedium", "location", "length", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["api_index", 7004226], ["name", "Sunshine Lions Lair Loop"], ["summary", "Great Mount Sanitas views are the reward for this gentler loop in Sunshine Canyon."], ["difficulty", "blue"], ["stars", 4.5], ["url", "https://www.hikingproject.com/trail/7004226/sunshine-lions-lair-loop"], ["imgSmallMed", "https://cdn-files.apstatic.com/hike/7039883_smallMed_1555092747.jpg"], ["imgMedium", "https://cdn-files.apstatic.com/hike/7039883_medium_1555092747.jpg"], ["location", "Boulder, Colorado"], ["length", 5.3], ["longitude", -105.2979], ["latitude", 40.02], ["created_at", "2020-04-23 20:05:59.398198"], ["updated_at", "2020-04-23 20:05:59.398198"]]
+  ↳ db/seeds.rb:95
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:95
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:110
+  [1m[36mTrail Create (0.3ms)[0m  [1m[32mINSERT INTO "trails" ("api_index", "name", "summary", "difficulty", "stars", "url", "imgSmallMed", "imgMedium", "location", "length", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["api_index", 7014350], ["name", "Charlies Bunion Out and Back"], ["summary", "A trail from Newfound Gap to Charlie's Bunion along the Appalachian Trail (AT)."], ["difficulty", "blue"], ["stars", 4.7], ["url", "https://www.hikingproject.com/trail/7014350/charlies-bunion-out-and-back"], ["imgSmallMed", "https://cdn-files.apstatic.com/hike/7011319_smallMed_1554400402.jpg"], ["imgMedium", "https://cdn-files.apstatic.com/hike/7011319_medium_1554400402.jpg"], ["location", "Gatlinburg, Tennessee"], ["length", 8.0], ["longitude", -83.425], ["latitude", 35.6109], ["created_at", "2020-04-23 20:05:59.401143"], ["updated_at", "2020-04-23 20:05:59.401143"]]
+  ↳ db/seeds.rb:110
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:110
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:125
+  [1m[36mTrail Create (0.4ms)[0m  [1m[32mINSERT INTO "trails" ("api_index", "name", "summary", "difficulty", "stars", "url", "imgSmallMed", "imgMedium", "location", "length", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["api_index", 7015700], ["name", "Mt. Cammerer from Low Gap"], ["summary", "A wooded trail with a 360-degree view payoff on top of the mountain."], ["difficulty", "blueBlack"], ["stars", 4.7], ["url", "https://www.hikingproject.com/trail/7015700/mt-cammerer-from-low-gap"], ["imgSmallMed", "https://cdn-files.apstatic.com/hike/7014429_smallMed_1554824285.jpg"], ["imgMedium", "https://cdn-files.apstatic.com/hike/7014429_medium_1554824285.jpg"], ["location", "Newport, Tennessee"], ["length", 10.8], ["longitude", -83.2049], ["latitude", 35.752], ["created_at", "2020-04-23 20:05:59.406656"], ["updated_at", "2020-04-23 20:05:59.406656"]]
+  ↳ db/seeds.rb:125
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:125
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:140
+  [1m[36mTrail Create (0.4ms)[0m  [1m[32mINSERT INTO "trails" ("api_index", "name", "summary", "difficulty", "stars", "url", "imgSmallMed", "imgMedium", "location", "length", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["api_index", 7011192], ["name", "Boulder Skyline Traverse"], ["summary", "The classic long mountain route in Boulder."], ["difficulty", "black"], ["stars", 4.7], ["url", "https://www.hikingproject.com/trail/7011192/boulder-skyline-traverse"], ["imgSmallMed", "https://cdn-files.apstatic.com/hike/7048859_smallMed_1555540136.jpg"], ["imgMedium", "https://cdn-files.apstatic.com/hike/7048859_medium_1555540136.jpg"], ["location", "Superior, Colorado"], ["length", 16.3], ["longitude", -105.2582], ["latitude", 39.9388], ["created_at", "2020-04-23 20:05:59.409428"], ["updated_at", "2020-04-23 20:05:59.409428"]]
+  ↳ db/seeds.rb:140
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:140
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.6ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 1], ["title", "Slurms's Hiking Trip"], ["description", "Clear your mind must be, if you are to find the villains behind this plot."], ["location", "East Guadalupe, North Carolina"], ["stars", 1.0], ["image", "https://cdn-files.apstatic.com/hike/7023297_smallMed_1554844842.jpg"], ["created_at", "2020-04-23 20:05:59.568826"], ["updated_at", "2020-04-23 20:05:59.568826"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.3ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 13], ["title", "Nibbler's Hiking Trip"], ["description", "Do. Or do not. There is no try."], ["location", "Julesmouth, Illinois"], ["stars", 3.0], ["image", "https://cdn-files.apstatic.com/hike/7039883_smallMed_1555092747.jpg"], ["created_at", "2020-04-23 20:05:59.574061"], ["updated_at", "2020-04-23 20:05:59.574061"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 5], ["title", "Kif's Hiking Trip"], ["description", "Soon will I rest, yes, forever sleep. Earned it I have. Twilight is upon me, soon night must fall."], ["location", "North Carie, South Carolina"], ["stars", 5.0], ["image", "https://cdn-files.apstatic.com/hike/7059495_smallMed_1560691891.jpg"], ["created_at", "2020-04-23 20:05:59.577517"], ["updated_at", "2020-04-23 20:05:59.577517"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 13], ["title", "Amy's Hiking Trip"], ["description", "To answer power with power, the Jedi way this is not. In this war, a danger there is, of losing who we are."], ["location", "Brooksport, North Dakota"], ["stars", 4.0], ["image", "https://cdn-files.apstatic.com/hike/7059495_smallMed_1560691891.jpg"], ["created_at", "2020-04-23 20:05:59.580484"], ["updated_at", "2020-04-23 20:05:59.580484"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 11], ["title", "Zapp's Hiking Trip"], ["description", "Ow, ow, OW! On my ear you are!"], ["location", "Fallonmouth, Wyoming"], ["stars", 4.0], ["image", "https://cdn-files.apstatic.com/hike/7032144_smallMed_1554932569.jpg"], ["created_at", "2020-04-23 20:05:59.583532"], ["updated_at", "2020-04-23 20:05:59.583532"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 1], ["title", "Philip's Hiking Trip"], ["description", "To answer power with power, the Jedi way this is not. In this war, a danger there is, of losing who we are."], ["location", "Ernserchester, Tennessee"], ["stars", 4.0], ["image", "https://cdn-files.apstatic.com/hike/7023297_smallMed_1554844842.jpg"], ["created_at", "2020-04-23 20:05:59.586546"], ["updated_at", "2020-04-23 20:05:59.586546"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 5], ["title", "Donbot's Hiking Trip"], ["description", "Strong is Vader. Mind what you have learned. Save you it can."], ["location", "Zackaryfurt, Florida"], ["stars", 1.0], ["image", "https://cdn-files.apstatic.com/hike/7039883_smallMed_1555092747.jpg"], ["created_at", "2020-04-23 20:05:59.589705"], ["updated_at", "2020-04-23 20:05:59.589705"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 2], ["title", "Hermes's Hiking Trip"], ["description", "Mudhole? Slimy? My home this is!"], ["location", "East Rayefurt, Vermont"], ["stars", 1.0], ["image", "https://cdn-files.apstatic.com/hike/7043231_smallMed_1555107854.jpg"], ["created_at", "2020-04-23 20:05:59.592952"], ["updated_at", "2020-04-23 20:05:59.592952"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 6], ["title", "Bender's Hiking Trip"], ["description", "Feel the force!"], ["location", "East Verena, Tennessee"], ["stars", 5.0], ["image", "https://cdn-files.apstatic.com/hike/7043231_smallMed_1555107854.jpg"], ["created_at", "2020-04-23 20:05:59.596000"], ["updated_at", "2020-04-23 20:05:59.596000"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 8], ["title", "Donbot's Hiking Trip"], ["description", "Your weapons, you will not need them."], ["location", "Everettside, West Virginia"], ["stars", 1.0], ["image", "https://cdn-files.apstatic.com/hike/7032144_smallMed_1554932569.jpg"], ["created_at", "2020-04-23 20:05:59.598919"], ["updated_at", "2020-04-23 20:05:59.598919"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 12], ["title", "Bender's Hiking Trip"], ["description", "Always two there are, no more, no less. A master and an apprentice."], ["location", "Jonesport, West Virginia"], ["stars", 5.0], ["image", "https://cdn-files.apstatic.com/hike/7025994_smallMed_1554913295.jpg"], ["created_at", "2020-04-23 20:05:59.601935"], ["updated_at", "2020-04-23 20:05:59.601935"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 5], ["title", "Leela's Hiking Trip"], ["description", "Always two there are, no more, no less. A master and an apprentice."], ["location", "Gleichnerhaven, Montana"], ["stars", 5.0], ["image", "https://cdn-files.apstatic.com/hike/7023297_smallMed_1554844842.jpg"], ["created_at", "2020-04-23 20:05:59.604895"], ["updated_at", "2020-04-23 20:05:59.604895"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 8], ["title", "Leela's Hiking Trip"], ["description", "Death is a natural part of life. Rejoice for those around you who transform into the Force. Mourn them do not. Miss them do not. Attachment leads to jealously. The shadow of greed, that is."], ["location", "Juliohaven, California"], ["stars", 5.0], ["image", "https://cdn-files.apstatic.com/hike/7023297_smallMed_1554844842.jpg"], ["created_at", "2020-04-23 20:05:59.608151"], ["updated_at", "2020-04-23 20:05:59.608151"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 4], ["title", "Calculon's Hiking Trip"], ["description", "Already know you that which you need."], ["location", "East Lorean, North Carolina"], ["stars", 1.0], ["image", "https://cdn-files.apstatic.com/hike/7043231_smallMed_1555107854.jpg"], ["created_at", "2020-04-23 20:05:59.611742"], ["updated_at", "2020-04-23 20:05:59.611742"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 10], ["title", "Philip's Hiking Trip"], ["description", "Younglings, younglings gather ’round."], ["location", "Pollichbury, Washington"], ["stars", 1.0], ["image", "https://cdn-files.apstatic.com/hike/7039883_smallMed_1555092747.jpg"], ["created_at", "2020-04-23 20:05:59.614732"], ["updated_at", "2020-04-23 20:05:59.614732"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 11], ["title", "Donbot's Hiking Trip"], ["description", "The dark side clouds everything. Impossible to see the future is."], ["location", "New Allysonton, Texas"], ["stars", 2.0], ["image", "https://cdn-files.apstatic.com/hike/7059495_smallMed_1560691891.jpg"], ["created_at", "2020-04-23 20:05:59.617651"], ["updated_at", "2020-04-23 20:05:59.617651"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.3ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 10], ["title", "Slurms's Hiking Trip"], ["description", "Good relations with the Wookiees, I have."], ["location", "East Quyenberg, Pennsylvania"], ["stars", 5.0], ["image", "https://cdn-files.apstatic.com/hike/7025994_smallMed_1554913295.jpg"], ["created_at", "2020-04-23 20:05:59.620462"], ["updated_at", "2020-04-23 20:05:59.620462"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 12], ["title", "Slurms's Hiking Trip"], ["description", "Strong is Vader. Mind what you have learned. Save you it can."], ["location", "Boscoland, Arkansas"], ["stars", 5.0], ["image", "https://cdn-files.apstatic.com/hike/7023297_smallMed_1554844842.jpg"], ["created_at", "2020-04-23 20:05:59.623529"], ["updated_at", "2020-04-23 20:05:59.623529"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 5], ["title", "Bender's Hiking Trip"], ["description", "To answer power with power, the Jedi way this is not. In this war, a danger there is, of losing who we are."], ["location", "Mosesberg, Pennsylvania"], ["stars", 4.0], ["image", "https://cdn-files.apstatic.com/hike/7023297_smallMed_1554844842.jpg"], ["created_at", "2020-04-23 20:05:59.626484"], ["updated_at", "2020-04-23 20:05:59.626484"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 8], ["title", "Bender's Hiking Trip"], ["description", "Good relations with the Wookiees, I have."], ["location", "Brettport, Louisiana"], ["stars", 1.0], ["image", "https://cdn-files.apstatic.com/hike/7059495_smallMed_1560691891.jpg"], ["created_at", "2020-04-23 20:05:59.629653"], ["updated_at", "2020-04-23 20:05:59.629653"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 7], ["title", "Kif's Hiking Trip"], ["description", "Size matters not. Look at me. Judge me by my size, do you? Hmm? Hmm. And well you should not. For my ally is the Force, and a powerful ally it is. Life creates it, makes it grow. Its energy surrounds us and binds us. Luminous beings are we, not this crude matter. You must feel the Force around you; here, between you, me, the tree, the rock, everywhere, yes. Even between the land and the ship."], ["location", "Candraberg, South Carolina"], ["stars", 5.0], ["image", "https://cdn-files.apstatic.com/hike/7043231_smallMed_1555107854.jpg"], ["created_at", "2020-04-23 20:05:59.632911"], ["updated_at", "2020-04-23 20:05:59.632911"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.3ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 3], ["title", "Leela's Hiking Trip"], ["description", "Not if anything to say about it I have"], ["location", "Port Shauntaborough, Utah"], ["stars", 3.0], ["image", "https://cdn-files.apstatic.com/hike/7043231_smallMed_1555107854.jpg"], ["created_at", "2020-04-23 20:05:59.636120"], ["updated_at", "2020-04-23 20:05:59.636120"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 11], ["title", "Donbot's Hiking Trip"], ["description", "Soon will I rest, yes, forever sleep. Earned it I have. Twilight is upon me, soon night must fall."], ["location", "Rolfland, Utah"], ["stars", 4.0], ["image", "https://cdn-files.apstatic.com/hike/7039883_smallMed_1555092747.jpg"], ["created_at", "2020-04-23 20:05:59.639849"], ["updated_at", "2020-04-23 20:05:59.639849"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 4], ["title", "Zapp's Hiking Trip"], ["description", "Always pass on what you have learned."], ["location", "North Dakota, Maine"], ["stars", 1.0], ["image", "https://cdn-files.apstatic.com/hike/7015863_smallMed_1554826913.jpg"], ["created_at", "2020-04-23 20:05:59.642927"], ["updated_at", "2020-04-23 20:05:59.642927"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:157
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[36mTrip Create (0.2ms)[0m  [1m[32mINSERT INTO "trips" ("user_id", "title", "description", "location", "stars", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 9], ["title", "Farnsworth's Hiking Trip"], ["description", "Ready are you? What know you of ready? For eight hundred years have I trained Jedi. My own counsel will I keep on who is to be trained. A Jedi must have the deepest commitment, the most serious mind. This one a long time have I watched. All his life has he looked away - to the future, to the horizon. Never his mind on where he was. Hmm? What he was doing. Hmph. Adventure. Heh. Excitement. Heh. A Jedi craves not these things. You are reckless."], ["location", "D'Amorefurt, Kansas"], ["stars", 2.0], ["image", "https://cdn-files.apstatic.com/hike/7032144_smallMed_1554932569.jpg"], ["created_at", "2020-04-23 20:05:59.645687"], ["updated_at", "2020-04-23 20:05:59.645687"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:156
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.7ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 4], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.654084"], ["updated_at", "2020-04-23 20:05:59.654084"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 25], ["trail_name", "East Palisades Route"], ["created_at", "2020-04-23 20:05:59.662316"], ["updated_at", "2020-04-23 20:05:59.662316"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 15], ["trail_name", "Mt. Cammerer from Low Gap"], ["created_at", "2020-04-23 20:05:59.665528"], ["updated_at", "2020-04-23 20:05:59.665528"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 12], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.667982"], ["updated_at", "2020-04-23 20:05:59.667982"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 7], ["trail_name", "Charlies Bunion Out and Back"], ["created_at", "2020-04-23 20:05:59.670392"], ["updated_at", "2020-04-23 20:05:59.670392"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 7], ["trail_name", "Charlies Bunion Out and Back"], ["created_at", "2020-04-23 20:05:59.672778"], ["updated_at", "2020-04-23 20:05:59.672778"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 10], ["trail_name", "Mt. Cammerer from Low Gap"], ["created_at", "2020-04-23 20:05:59.675326"], ["updated_at", "2020-04-23 20:05:59.675326"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 23], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.677895"], ["updated_at", "2020-04-23 20:05:59.677895"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 10], ["trail_name", "Beltline Eastside Trail: Piedmont Park to Krog Street Market"], ["created_at", "2020-04-23 20:05:59.680217"], ["updated_at", "2020-04-23 20:05:59.680217"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 4], ["trail_name", "Beltline Eastside Trail: Piedmont Park to Krog Street Market"], ["created_at", "2020-04-23 20:05:59.682622"], ["updated_at", "2020-04-23 20:05:59.682622"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 18], ["trail_name", "Charlies Bunion Out and Back"], ["created_at", "2020-04-23 20:05:59.685282"], ["updated_at", "2020-04-23 20:05:59.685282"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 11], ["trail_name", "Charlies Bunion Out and Back"], ["created_at", "2020-04-23 20:05:59.687829"], ["updated_at", "2020-04-23 20:05:59.687829"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 23], ["trail_name", "Charlies Bunion Out and Back"], ["created_at", "2020-04-23 20:05:59.689979"], ["updated_at", "2020-04-23 20:05:59.689979"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 5], ["trail_name", "Charlies Bunion Out and Back"], ["created_at", "2020-04-23 20:05:59.692062"], ["updated_at", "2020-04-23 20:05:59.692062"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 17], ["trail_name", "Mt. Cammerer from Low Gap"], ["created_at", "2020-04-23 20:05:59.694019"], ["updated_at", "2020-04-23 20:05:59.694019"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 22], ["trail_name", "Mt. Cammerer from Low Gap"], ["created_at", "2020-04-23 20:05:59.696336"], ["updated_at", "2020-04-23 20:05:59.696336"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 10], ["trail_name", "Charlies Bunion Out and Back"], ["created_at", "2020-04-23 20:05:59.698628"], ["updated_at", "2020-04-23 20:05:59.698628"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 20], ["trail_name", "Charlies Bunion Out and Back"], ["created_at", "2020-04-23 20:05:59.700807"], ["updated_at", "2020-04-23 20:05:59.700807"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 3], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.703028"], ["updated_at", "2020-04-23 20:05:59.703028"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 4], ["trail_name", "Boulder Skyline Traverse"], ["created_at", "2020-04-23 20:05:59.705222"], ["updated_at", "2020-04-23 20:05:59.705222"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 23], ["trail_name", "East Palisades Route"], ["created_at", "2020-04-23 20:05:59.707759"], ["updated_at", "2020-04-23 20:05:59.707759"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 18], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.710155"], ["updated_at", "2020-04-23 20:05:59.710155"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 7], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.712576"], ["updated_at", "2020-04-23 20:05:59.712576"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 21], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.714950"], ["updated_at", "2020-04-23 20:05:59.714950"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 9], ["trail_name", "Mt. Cammerer from Low Gap"], ["created_at", "2020-04-23 20:05:59.717303"], ["updated_at", "2020-04-23 20:05:59.717303"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 3], ["trail_name", "Boulder Skyline Traverse"], ["created_at", "2020-04-23 20:05:59.719490"], ["updated_at", "2020-04-23 20:05:59.719490"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 6], ["trail_name", "Boulder Skyline Traverse"], ["created_at", "2020-04-23 20:05:59.721555"], ["updated_at", "2020-04-23 20:05:59.721555"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 3], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.723634"], ["updated_at", "2020-04-23 20:05:59.723634"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 13], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.725661"], ["updated_at", "2020-04-23 20:05:59.725661"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 20], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.728198"], ["updated_at", "2020-04-23 20:05:59.728198"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 10], ["trail_name", "Charlies Bunion Out and Back"], ["created_at", "2020-04-23 20:05:59.730219"], ["updated_at", "2020-04-23 20:05:59.730219"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 9], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.732293"], ["updated_at", "2020-04-23 20:05:59.732293"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 8], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.734403"], ["updated_at", "2020-04-23 20:05:59.734403"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 5], ["trail_name", "Charlies Bunion Out and Back"], ["created_at", "2020-04-23 20:05:59.736386"], ["updated_at", "2020-04-23 20:05:59.736386"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 5], ["trail_name", "Boulder Skyline Traverse"], ["created_at", "2020-04-23 20:05:59.738776"], ["updated_at", "2020-04-23 20:05:59.738776"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 1], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.740999"], ["updated_at", "2020-04-23 20:05:59.740999"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 18], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.743034"], ["updated_at", "2020-04-23 20:05:59.743034"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 6], ["trail_name", "Mt. Cammerer from Low Gap"], ["created_at", "2020-04-23 20:05:59.745059"], ["updated_at", "2020-04-23 20:05:59.745059"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 16], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.747053"], ["updated_at", "2020-04-23 20:05:59.747053"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 23], ["trail_name", "Charlies Bunion Out and Back"], ["created_at", "2020-04-23 20:05:59.749011"], ["updated_at", "2020-04-23 20:05:59.749011"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 14], ["trail_name", "Beltline Eastside Trail: Piedmont Park to Krog Street Market"], ["created_at", "2020-04-23 20:05:59.751106"], ["updated_at", "2020-04-23 20:05:59.751106"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 4], ["trail_name", "Charlies Bunion Out and Back"], ["created_at", "2020-04-23 20:05:59.753154"], ["updated_at", "2020-04-23 20:05:59.753154"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 24], ["trail_name", "Beltline Eastside Trail: Piedmont Park to Krog Street Market"], ["created_at", "2020-04-23 20:05:59.755285"], ["updated_at", "2020-04-23 20:05:59.755285"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 11], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.757249"], ["updated_at", "2020-04-23 20:05:59.757249"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 18], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.759599"], ["updated_at", "2020-04-23 20:05:59.759599"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 23], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.761747"], ["updated_at", "2020-04-23 20:05:59.761747"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 15], ["trail_name", "Mt. Cammerer from Low Gap"], ["created_at", "2020-04-23 20:05:59.763886"], ["updated_at", "2020-04-23 20:05:59.763886"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 23], ["trail_name", "Charlies Bunion Out and Back"], ["created_at", "2020-04-23 20:05:59.765872"], ["updated_at", "2020-04-23 20:05:59.765872"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 13], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.767882"], ["updated_at", "2020-04-23 20:05:59.767882"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 10], ["trail_name", "Mt. Cammerer from Low Gap"], ["created_at", "2020-04-23 20:05:59.769869"], ["updated_at", "2020-04-23 20:05:59.769869"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 21], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.771851"], ["updated_at", "2020-04-23 20:05:59.771851"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 17], ["trail_name", "Charlies Bunion Out and Back"], ["created_at", "2020-04-23 20:05:59.774050"], ["updated_at", "2020-04-23 20:05:59.774050"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 24], ["trail_name", "Boulder Skyline Traverse"], ["created_at", "2020-04-23 20:05:59.776210"], ["updated_at", "2020-04-23 20:05:59.776210"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 18], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.778288"], ["updated_at", "2020-04-23 20:05:59.778288"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 7], ["trail_name", "Mt. Cammerer from Low Gap"], ["created_at", "2020-04-23 20:05:59.780544"], ["updated_at", "2020-04-23 20:05:59.780544"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 21], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.782853"], ["updated_at", "2020-04-23 20:05:59.782853"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 7], ["trail_name", "Mt. Cammerer from Low Gap"], ["created_at", "2020-04-23 20:05:59.784935"], ["updated_at", "2020-04-23 20:05:59.784935"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 4], ["trail_name", "Boulder Skyline Traverse"], ["created_at", "2020-04-23 20:05:59.787152"], ["updated_at", "2020-04-23 20:05:59.787152"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 10], ["trail_name", "Boulder Skyline Traverse"], ["created_at", "2020-04-23 20:05:59.789313"], ["updated_at", "2020-04-23 20:05:59.789313"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 13], ["trail_name", "Mt. Cammerer from Low Gap"], ["created_at", "2020-04-23 20:05:59.791474"], ["updated_at", "2020-04-23 20:05:59.791474"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 12], ["trail_name", "Beltline Eastside Trail: Piedmont Park to Krog Street Market"], ["created_at", "2020-04-23 20:05:59.793603"], ["updated_at", "2020-04-23 20:05:59.793603"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 13], ["trail_name", "Mt. Cammerer from Low Gap"], ["created_at", "2020-04-23 20:05:59.795728"], ["updated_at", "2020-04-23 20:05:59.795728"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 2], ["trail_name", "East Palisades Route"], ["created_at", "2020-04-23 20:05:59.797759"], ["updated_at", "2020-04-23 20:05:59.797759"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 8], ["trail_name", "East Palisades Route"], ["created_at", "2020-04-23 20:05:59.799776"], ["updated_at", "2020-04-23 20:05:59.799776"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 20], ["trail_name", "East Palisades Route"], ["created_at", "2020-04-23 20:05:59.802101"], ["updated_at", "2020-04-23 20:05:59.802101"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 10], ["trail_name", "Mt. Cammerer from Low Gap"], ["created_at", "2020-04-23 20:05:59.804463"], ["updated_at", "2020-04-23 20:05:59.804463"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 19], ["trail_name", "East Palisades Route"], ["created_at", "2020-04-23 20:05:59.806705"], ["updated_at", "2020-04-23 20:05:59.806705"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 17], ["trail_name", "Mt. Cammerer from Low Gap"], ["created_at", "2020-04-23 20:05:59.808912"], ["updated_at", "2020-04-23 20:05:59.808912"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 24], ["trail_name", "Boulder Skyline Traverse"], ["created_at", "2020-04-23 20:05:59.810957"], ["updated_at", "2020-04-23 20:05:59.810957"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 18], ["trail_name", "Charlies Bunion Out and Back"], ["created_at", "2020-04-23 20:05:59.812935"], ["updated_at", "2020-04-23 20:05:59.812935"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 12], ["trail_name", "Boulder Skyline Traverse"], ["created_at", "2020-04-23 20:05:59.814963"], ["updated_at", "2020-04-23 20:05:59.814963"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 14], ["trail_name", "Mt. Cammerer from Low Gap"], ["created_at", "2020-04-23 20:05:59.816989"], ["updated_at", "2020-04-23 20:05:59.816989"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 16], ["trail_name", "Boulder Skyline Traverse"], ["created_at", "2020-04-23 20:05:59.819015"], ["updated_at", "2020-04-23 20:05:59.819015"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 17], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.821115"], ["updated_at", "2020-04-23 20:05:59.821115"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 6], ["trail_name", "Beltline Eastside Trail: Piedmont Park to Krog Street Market"], ["created_at", "2020-04-23 20:05:59.823251"], ["updated_at", "2020-04-23 20:05:59.823251"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 2], ["trail_name", "Boulder Skyline Traverse"], ["created_at", "2020-04-23 20:05:59.825422"], ["updated_at", "2020-04-23 20:05:59.825422"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 15], ["trail_name", "Beltline Eastside Trail: Piedmont Park to Krog Street Market"], ["created_at", "2020-04-23 20:05:59.827420"], ["updated_at", "2020-04-23 20:05:59.827420"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 18], ["trail_name", "Mt. Cammerer from Low Gap"], ["created_at", "2020-04-23 20:05:59.829419"], ["updated_at", "2020-04-23 20:05:59.829419"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 5], ["trail_name", "Beltline Eastside Trail: Piedmont Park to Krog Street Market"], ["created_at", "2020-04-23 20:05:59.831401"], ["updated_at", "2020-04-23 20:05:59.831401"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.5ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 5], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.861624"], ["updated_at", "2020-04-23 20:05:59.861624"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.4ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 15], ["trail_name", "Charlies Bunion Out and Back"], ["created_at", "2020-04-23 20:05:59.865955"], ["updated_at", "2020-04-23 20:05:59.865955"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 20], ["trail_name", "Beltline Eastside Trail: Piedmont Park to Krog Street Market"], ["created_at", "2020-04-23 20:05:59.869648"], ["updated_at", "2020-04-23 20:05:59.869648"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 12], ["trail_name", "Boulder Skyline Traverse"], ["created_at", "2020-04-23 20:05:59.872361"], ["updated_at", "2020-04-23 20:05:59.872361"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 4], ["trail_name", "Boulder Skyline Traverse"], ["created_at", "2020-04-23 20:05:59.874884"], ["updated_at", "2020-04-23 20:05:59.874884"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 9], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.877453"], ["updated_at", "2020-04-23 20:05:59.877453"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 12], ["trail_name", "Charlies Bunion Out and Back"], ["created_at", "2020-04-23 20:05:59.879987"], ["updated_at", "2020-04-23 20:05:59.879987"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 18], ["trail_name", "Boulder Skyline Traverse"], ["created_at", "2020-04-23 20:05:59.882380"], ["updated_at", "2020-04-23 20:05:59.882380"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 15], ["trail_name", "Boulder Skyline Traverse"], ["created_at", "2020-04-23 20:05:59.884869"], ["updated_at", "2020-04-23 20:05:59.884869"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 16], ["trail_name", "Charlies Bunion Out and Back"], ["created_at", "2020-04-23 20:05:59.887510"], ["updated_at", "2020-04-23 20:05:59.887510"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 20], ["trail_name", "Mt. Cammerer from Low Gap"], ["created_at", "2020-04-23 20:05:59.890176"], ["updated_at", "2020-04-23 20:05:59.890176"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 17], ["trail_name", "East Palisades Route"], ["created_at", "2020-04-23 20:05:59.892530"], ["updated_at", "2020-04-23 20:05:59.892530"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 7], ["trail_name", "Boulder Skyline Traverse"], ["created_at", "2020-04-23 20:05:59.894892"], ["updated_at", "2020-04-23 20:05:59.894892"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 13], ["trail_name", "Boulder Skyline Traverse"], ["created_at", "2020-04-23 20:05:59.897139"], ["updated_at", "2020-04-23 20:05:59.897139"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 10], ["trail_name", "Beltline Eastside Trail: Piedmont Park to Krog Street Market"], ["created_at", "2020-04-23 20:05:59.899597"], ["updated_at", "2020-04-23 20:05:59.899597"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 9], ["trail_name", "East Palisades Route"], ["created_at", "2020-04-23 20:05:59.901933"], ["updated_at", "2020-04-23 20:05:59.901933"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 21], ["trail_name", "Sunshine Lions Lair Loop"], ["created_at", "2020-04-23 20:05:59.904237"], ["updated_at", "2020-04-23 20:05:59.904237"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.4ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 19], ["trail_name", "East Palisades Route"], ["created_at", "2020-04-23 20:05:59.906871"], ["updated_at", "2020-04-23 20:05:59.906871"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 19], ["trail_name", "Mt. Cammerer from Low Gap"], ["created_at", "2020-04-23 20:05:59.909417"], ["updated_at", "2020-04-23 20:05:59.909417"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.2ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 15], ["trail_name", "Boulder Skyline Traverse"], ["created_at", "2020-04-23 20:05:59.911710"], ["updated_at", "2020-04-23 20:05:59.911710"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ db/seeds.rb:169
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  ↳ db/seeds.rb:170
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:168
+  [1m[36mDestination Create (0.1ms)[0m  [1m[32mINSERT INTO "destinations" ("trek_type", "trek_id", "trail_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trek_type", "Trip"], ["trek_id", 21], ["trail_name", "Charlies Bunion Out and Back"], ["created_at", "2020-04-23 20:05:59.914032"], ["updated_at", "2020-04-23 20:05:59.914032"]]
+  ↳ db/seeds.rb:168
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:168
