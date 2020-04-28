@@ -1,10 +1,13 @@
 import React, { Component } from "react"
 import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 import { Form, FormInput, FormGroup } from "shards-react"
 import { Modal, Button } from "react-bootstrap"
 import SignUpDiv from "./SignUpDiv"
 
 class SignUp extends Component {
+    state={redirect: null}
+
     handleSignUp = (e) => {
         e.preventDefault()
         if(e.target.name.value && e.target.email.value && e.target.password.value) {
@@ -24,6 +27,7 @@ class SignUp extends Component {
                 if(res.jwt) {
                     localStorage.setItem('token', res.jwt)
                     this.props.dispatch({ type: 'GET_USER', user: res.user })
+                    this.setState({ redirect: <Redirect to='/profile' /> })
                 }
             })
         }
@@ -32,6 +36,7 @@ class SignUp extends Component {
     render() {
         return (
             <SignUpDiv>
+                {this.state.redirect}
                 <Modal.Dialog>
                     <Modal.Header>
                         <h3>Sign Up Form</h3>
