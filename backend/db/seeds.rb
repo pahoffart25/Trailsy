@@ -1,64 +1,61 @@
-
 Destination.destroy_all
 Follow.destroy_all
 Trail.destroy_all
 Trip.destroy_all
+
 User.destroy_all
 
-Philip = User.create(name: "Philip", email: 'philip@planetexpress.com', password: "123", profile_picture: "https://avatars3.githubusercontent.com/u/7104822?s=460&u=4c216cc65279ba46e09c56749057471cba8457c4&v=4")
+Philip = User.create(name: "Philip", email: 'Philip@gmail.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/f/f2/PhilipJ.Fry.png/revision/latest?cb=20110916120042")
 
-Bender = User.create(name: "Bender", email: 'bender@planetexpress.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/4/43/Bender.png/revision/latest?cb=20150206072725")
+Leela = User.create(name: "Leela", email: 'andy@gmail.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/d/d4/Turanga_Leela.png/revision/latest?cb=20150218013044")
 
-Amy = User.create(name: "Amy", email: 'amy@planetexpress.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/9/94/AmyWong.png/revision/latest?cb=20170123190854" )
+Bender = User.create(name: "Bender", email: 'Bender@gmail.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/4/43/Bender.png/revision/latest?cb=20150206072725" )
 
-Leela = User.create(name: "Leela", email: 'leela@planetexpress.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/d/d4/Turanga_Leela.png/revision/latest?cb=20150218013044")
+Farnsworth = User.create(name: "Farnsworth", email: 'Farnsworth@gmail.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/4/4e/Farnsworth.png/revision/latest?cb=20110710094500")
 
-Farnsworth = User.create(name: "Farnsworth", email: 'farnsworth@planetexpress.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/4/4e/Farnsworth.png/revision/latest?cb=20110710094500")
+Hermes = User.create(name: "Hermes", email: 'Hermes@gmail.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/0/0d/Hermes.png/revision/latest?cb=20170719011119")
 
-Hermes = User.create(name: "Hermes", email: 'hermes@planetexpress.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/0/0d/Hermes.png/revision/latest?cb=20170719011119")
+Zoidberg = User.create(name: "Zoidberg", email: 'Zoidberg@gmail.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/4/45/Dr._John_A._Zoidberg.png/revision/latest?cb=20101014052403")
 
-Zoidberg = User.create(name: "Zoidberg", email: 'zoidberg@planetexpress.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/4/45/Dr._John_A._Zoidberg.png/revision/latest?cb=20101014052403")
+Scruffy = User.create(name: "Scruffy", email: 'Scruffy@gmail.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/1/10/Scruffy.png/revision/latest?cb=20170123190905")
 
-Zapp = User.create(name: "Zapp", email: 'zapp@planetexpress.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/e/e9/Zapp_Brannigan.png/revision/latest?cb=20101013084300")
+Zapp = User.create(name: "Zapp", email: 'Zapp@gmail.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/e/e9/Zapp_Brannigan.png/revision/latest?cb=20101013084300")
 
-Kif = User.create(name: "Kif", email: 'kif@planetexpress.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/8/82/Lieutenant_Kif_Kroker.png/revision/latest?cb=20101013084718")
+Kif = User.create(name: "Kif", email: 'Kif@gmail.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/8/82/Lieutenant_Kif_Kroker.png/revision/latest?cb=20101013084718")
 
-Calculon = User.create(name: "Calculon", email: 'calculon@planetexpress.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/b/b3/Calculon-2.JPG/revision/latest/scale-to-width-down/700?cb=20090604015557")
+Calculon = User.create(name: "Calculon", email: 'Calculon@gmail.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/b/b3/Calculon-2.JPG/revision/latest/scale-to-width-down/700?cb=20090604015557")
 
-Slurms = User.create(name: "Slurms", email: 'slurms@planetexpress.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/8/80/Slurm-1-.jpg/revision/latest?cb=20060626052801")
+Donbot = User.create(name: "Donbot", email: 'Donbot@gmail.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/1/13/Donbot.jpg/revision/latest?cb=20080112205318")
 
-Nibbler = User.create(name: "Nibbler", email: 'nibbler@planetexpress.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/2/26/Lord_Nibbler.png/revision/latest?cb=20101013083936")
+Nibbler = User.create(name: "Nibbler", email: 'Nibbler@gmail.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/2/26/Lord_Nibbler.png/revision/latest?cb=20101013083936")
 
-Donbot = User.create(name: "Donbot", email: 'donbot@planetexpress.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/1/13/Donbot.jpg/revision/latest?cb=20080112205318")
-
-
-f1 = Follow.create(followed_user: Bender, user: Donbot)
-f2 = Follow.create(followed_user: Donbot, user: Bender)
-f3 = Follow.create(followed_user: Kif, user: Amy)
-f4 = Follow.create(followed_user: Amy , user: Kif)
-f5 = Follow.create(followed_user: Slurms , user: Nibbler)
-f6 = Follow.create(followed_user: Nibbler , user: Slurms)
-f7 = Follow.create(followed_user: Calculon, user: Zapp)
-f8 = Follow.create(followed_user: Zapp, user: Calculon)
-f9 = Follow.create(followed_user: Hermes, user: Zoidberg)
-f10 = Follow.create(followed_user: Zoidberg, user: Hermes)
-f11 = Follow.create(followed_user: Farnsworth, user: Leela)
-f12 = Follow.create(followed_user: Leela, user: Farnsworth)
-f13 = Follow.create(followed_user: Bender, user: Philip)
-f14 = Follow.create(followed_user: Philip, user: Bender)
-
+f1 = Follow.create(followed_user: Philip, user: Leela)
+f2 = Follow.create(followed_user: Leela, user: Philip)
+f3 = Follow.create(followed_user: Donbot, user: Philip)
+f4 = Follow.create(followed_user: Farnsworth , user: Philip)
+f5 = Follow.create(followed_user: Calculon , user: Philip)
+f6 = Follow.create(followed_user: Nibbler , user: Philip)
+f7 = Follow.create(followed_user: Philip, user: Bender)
+f8 = Follow.create(followed_user: Philip, user: Farnsworth)
+f9 = Follow.create(followed_user: Philip, user: Hermes)
+f10 = Follow.create(followed_user: Philip, user: Zoidberg)
+f11 = Follow.create(followed_user: Philip, user: Scruffy)
+f12 = Follow.create(followed_user: Philip, user: Zapp)
+f13 = Follow.create(followed_user: Donbot, user: Bender)
+f14 = Follow.create(followed_user: Donbot, user: Farnsworth)
+f15 = Follow.create(followed_user: Donbot, user: Hermes)
+f16 = Follow.create(followed_user: Donbot, user: Zoidberg)
+f17 = Follow.create(followed_user: Donbot, user: Scruffy)
 
 
 
 img1 = "https://cdn-files.apstatic.com/hike/7023297_smallMed_1554844842.jpg"
 img2 = "https://cdn-files.apstatic.com/hike/7015863_smallMed_1554826913.jpg"
 img3 = "https://cdn-files.apstatic.com/hike/7025994_smallMed_1554913295.jpg"
-img4 = "https://cdn-files.apstatic.com/hike/7039883_smallMed_1555092747.jpg"
+img4 = "https://cdn-files.apstatic.com/hike/7024143_smallMed_1554846342.jpg"
 img5 = "https://cdn-files.apstatic.com/hike/7059495_smallMed_1560691891.jpg"
 img6 = "https://cdn-files.apstatic.com/hike/7032144_smallMed_1554932569.jpg"
 img7 = "https://cdn-files.apstatic.com/hike/7043231_smallMed_1555107854.jpg"
-img8 = "https://cdn-files.apstatic.com/hike/7024143_smallMed_1554846342.jpg"
-
 
 img_arr = [img1, img2, img3, img4, img5, img6, img7]
 
@@ -93,18 +90,18 @@ trail2 = Trail.create(
 )
 
 trail3 = Trail.create(
-    api_index: 7004226, 
-    name: "Sunshine Lions Lair Loop", 
-    summary: "Great Mount Sanitas views are the reward for this gentler loop in Sunshine Canyon.",   
+    api_index: 7034642, 
+    name: "Sope Creek", 
+    summary: "Sope Creek has a few miles of gravel and some good, fun, singletrack in metro Atlanta.",   
     difficulty: "blue",
-    stars: 4.5,
-    url: "https://www.hikingproject.com/trail/7004226/sunshine-lions-lair-loop",
-    imgSmallMed: "https://cdn-files.apstatic.com/hike/7039883_smallMed_1555092747.jpg",
-    imgMedium: "https://cdn-files.apstatic.com/hike/7039883_medium_1555092747.jpg",
-    location: "Boulder, Colorado",
-    length: 5.3,
-    longitude: -105.2979,
-    latitude: 40.02
+    stars: 4,
+    url: "https://www.hikingproject.com/trail/7034642/sope-creek",
+    imgSmallMed: "https://cdn-files.apstatic.com/hike/7003862_smallMed_1554235788.jpg",
+    imgMedium: "https://cdn-files.apstatic.com/hike/7003862_medium_1554235788.jpg",
+    location: "Vinings, Georgia",
+    length: 8.8,
+    longitude: -84.4455,
+    latitude: 33.9042
 )
 
 trail4 = Trail.create(
@@ -137,26 +134,13 @@ trail5 = Trail.create(
     latitude: 35.752
 )
 
-trail6 = Trail.create(
-    api_index: 7011192, 
-    name: "Boulder Skyline Traverse", 
-    summary: "The classic long mountain route in Boulder.",   
-    difficulty: "black",
-    stars: 4.7,
-    url: "https://www.hikingproject.com/trail/7011192/boulder-skyline-traverse",
-    imgSmallMed: "https://cdn-files.apstatic.com/hike/7048859_smallMed_1555540136.jpg",
-    imgMedium: "https://cdn-files.apstatic.com/hike/7048859_medium_1555540136.jpg",
-    location: "Superior, Colorado",
-    length: 16.3,
-    longitude: -105.2582,
-    latitude: 39.9388
-)
-
 25.times do
+    user_randonm_id = User.all.sample.id
+    user_random_name = User.find(user_randonm_id).name
     Trip.create(
-      user_id: User.all.sample.id,
-      title: User.all.sample.name + "'s Hiking Trip",
-      description: Faker::Quote.yoda,
+      user_id: user_randonm_id,
+      title: user_random_name + "'s Hiking Trip",
+      description: Faker::Books::Dune.quote,
       location: (Faker::Address.city + ", " + Faker::Address.state),
       stars: rand(1..5),
       image: img_arr.sample

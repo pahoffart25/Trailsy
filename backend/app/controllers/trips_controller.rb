@@ -19,8 +19,8 @@ class TripsController < ApplicationController
     end
 
     def show
-        begin trip = Trip.find(params[:id])
-            render json: trip
+        begin @trip = Trip.find(params[:id])
+            render json: @trip
         rescue
             render json: {status: "error", code: 404, message: "Trip doesn't exist!"}
         end

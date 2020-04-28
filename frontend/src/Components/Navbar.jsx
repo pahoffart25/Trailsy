@@ -19,8 +19,7 @@ import {
 
 class NavExample extends React.Component {
 
-  // imageText = require("../Images/trail-explorer-logo-text.png")
-  // imageLogo = require("../Images/trail-explorer-logo-main.png")
+
 
   constructor(props) {
     super(props)
@@ -53,11 +52,11 @@ class NavExample extends React.Component {
   }
 
   render() {
+    console.log("history-----------------------------------");
+    console.log(this.props.history);
     return (
       
-      <Navbar type="light" theme="light" expand="md">
-        {/* <img src={this.imageText} className="text-logo" alt="logo"/> */}
-        {/* <NavbarBrand><img src={this.imageLogo} className="image-logo" alt="trail-logo"/></NavbarBrand> */}
+      <Navbar type="dark" theme="dark" expand="md">
         <NavbarToggler onClick={this.toggleNavbar} />
 
         <Collapse open={this.state.collapseOpen} navbar>
@@ -92,9 +91,9 @@ class NavExample extends React.Component {
                         <DropdownItem  href="/edit-profile" >Edit</DropdownItem>
                       </DropdownMenu>
                   </Dropdown>
-
+                  
                   <NavItem>
-                    <NavLink active onClick={()=> this.props.dispatch({ type: 'LOG_OUT' }) }>
+                    <NavLink active onClick={()=> { this.props.dispatch({ type: 'LOG_OUT' }); }} href= "/">
                       Log Out
                     </NavLink>
                   </NavItem> 

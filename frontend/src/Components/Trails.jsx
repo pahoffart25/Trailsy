@@ -1,10 +1,27 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Card, ListGroup, Image } from "react-bootstrap"
+import Iframe from 'react-iframe'
+
+
+import PlacesAutocomplete, {geocodeByAddress, getLatLng} from 'react-places-autocomplete';
+import "../Styles/Trails.scss";
+
 
 class Trails extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = { 
+            address: '',
+            mapPosition: "https://www.hikingproject.com/widget/map?favs=1&location=ip&x=-9402411&y=4020493&z=11.5&h=500"
+        };
+    }
+
+    
+
     fetchTrails = (lat, lon) => {
-        const maxResults = 18
+        const maxResults = 15
         const decimalReplaceLat = lat.replace('.', '!')
         const decimalReplaceLon = lon.replace('.', '!')
         fetch(`http://localhost:3000/trails&lat=${decimalReplaceLat}&lon=${decimalReplaceLon}&maxResults=${maxResults}`)
@@ -43,7 +60,7 @@ class Trails extends Component {
         if(this.props){
           const trailCards = this.props.trailReducer.map(t => {
             return(
-                <Card id="trail-card" key={t.id}>
+                <Card border="dark"  id="trail-card" key={t.id}>
                     <Card.Img 
                         
                         id="trail-card-image" 
@@ -82,6 +99,10 @@ class Trails extends Component {
     render() {
         return (
             <div>
+                <Iframe title="trails-map" className="trails-map" frameborder="0" scrolling="yes" 
+                    src={this.state.mapPosition}>
+                </Iframe>
+              {/* here */}
                 {this.renderTrails()}
             </div>
         )
