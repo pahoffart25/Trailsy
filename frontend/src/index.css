@@ -9,6 +9,12 @@
   height: 67px;
 }
 
+.App {
+  text-align: center;
+  background-color: darkslategrey;
+  background-size: cover;
+}
+
 
 /* TRAILS HOMEPAGE */
 .trails-map {
@@ -79,7 +85,7 @@
 }
 
 #trip-card-image {
-  object-fit: cover;
+  object-fit: scale-down;
   height: 20rem;
   width: 100%;
   align-self: center;
@@ -115,6 +121,9 @@ div.carousel.slide {
 }
 
 
+.trip-card-image{
+  transform: translateX(50px);
+}
 /* TRIP MODAL */
 #trip-show-modal {
   border-radius: 8px;
