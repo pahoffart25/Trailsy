@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :email
       t.string :password_digest
       t.string :bio
-      t.string :profile_picture, default: "default"
+      t.string :profile_picture
 
       t.timestamps
     end
