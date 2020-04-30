@@ -7,7 +7,7 @@ User.destroy_all
 
 Philip = User.create(name: "Philip", email: 'Philip@gmail.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/f/f2/PhilipJ.Fry.png/revision/latest?cb=20110916120042")
 
-Leela = User.create(name: "Leela", email: 'andy@gmail.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/d/d4/Turanga_Leela.png/revision/latest?cb=20150218013044")
+Leela = User.create(name: "Leela", email: 'Leela@gmail.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/d/d4/Turanga_Leela.png/revision/latest?cb=20150218013044")
 
 Bender = User.create(name: "Bender", email: 'Bender@gmail.com', password: "123", profile_picture: "https://vignette.wikia.nocookie.net/en.futurama/images/4/43/Bender.png/revision/latest?cb=20150206072725" )
 
@@ -140,7 +140,7 @@ trail5 = Trail.create(
     Trip.create(
       user_id: user_randonm_id,
       title: user_random_name + "'s Hiking Trip",
-      description: Faker::Books::Dune.quote,
+      description: Faker::Quote.yoda,
       location: (Faker::Address.city + ", " + Faker::Address.state),
       stars: rand(1..5),
       image: img_arr.sample
