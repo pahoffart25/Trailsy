@@ -18,7 +18,7 @@ class SignUp extends Component {
                     user: {
                         name: e.target.name.value,
                         email: e.target.email.value.toLowerCase(),
-                        password: e.target.password.value
+                        password: e.target.password.value,
                     }
                 })
             })
@@ -30,7 +30,7 @@ class SignUp extends Component {
                     this.setState({ redirect: <Redirect to='/profile' /> })
                 }
             })
-        }
+        } else alert("Please fill out all information")
     }
 
     render() {
@@ -51,6 +51,8 @@ class SignUp extends Component {
                                 <FormInput type="name" name="name" id="#name" placeholder="Name" />
                             </FormGroup>
 
+
+
                             <FormGroup>
                                 <label htmlFor="#email">Email</label>
                                 <FormInput type="email" name="email" id="#email" placeholder="Email" />
@@ -59,7 +61,7 @@ class SignUp extends Component {
                             <FormGroup>
                                 <label htmlFor="#password">Password</label>
                                 <FormInput name="password" type="password" id="#password" placeholder="Password" /><br/>
-                                <Button type="submit"> Submit </Button><br/>
+                                <button class="btn btn-dark" type="submit"> Submit </button><br/>
                             </FormGroup>
                         </Form>
                         

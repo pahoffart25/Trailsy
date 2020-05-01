@@ -17,7 +17,7 @@ class Trip extends Component {
                 <p>{this.props.trip.description}</p>
                 <ul>{this.props.trip.trail_names.map(trail_name => <li>{trail_name}</li>)}</ul>
                 <p> {this.props.trip.stars} <FaStar/> </p>
-                <Button onClick={()=> this.setState({ showModal: false }) } variant="secondary">Close</Button>
+                <button class="btn btn-dark" onClick={()=> this.setState({ showModal: false }) }>Close</button>
             </Modal>
         )
     }
@@ -31,7 +31,7 @@ class Trip extends Component {
                     <img class="card-img-top" src={this.props.trip.image} alt="Card image cap"/>
                     <div class="card-body">
                         <p class="card-text">{this.props.trip.title}</p>
-                        <Button onClick={()=> this.setState({ showModal: true })} variant="primary">Trip Details</Button>
+                        <button class="btn btn-dark" onClick={()=> this.setState({ showModal: true })}>Trip Details</button>
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@ class Login extends React.Component {
 
     handleLogin = (e) => {
         e.preventDefault()
-        if(e.target.email.value && e.target.password.value) {
+        // if(e.target.email.value && e.target.password.value) {
             fetch('http://localhost:3000/login',{
                 method: 'POST',
                 headers: { Accept: 'application/json', 'Content-Type':'application/json' },
@@ -25,12 +25,12 @@ class Login extends React.Component {
             .then(res => res.json())
             .then(res => {
                 if(res.jwt) {
+                    // console.log(res.jwt)
                     localStorage.setItem('token', res.jwt)
                     this.props.dispatch({ type: 'GET_USER', user: res.user })
                     this.setState({ redirect: <Redirect to='/' /> })
-                }
-            })
-        }
+                } else alert("Email or Password is incorrect")
+            }) 
     }
 
     render() {
@@ -53,11 +53,11 @@ class Login extends React.Component {
                                 <FormInput name="password" type="password" id="#password" placeholder="Password" />
                             </FormGroup>
 
-                            <Button type="submit">Login</Button><br/><br/>
+                            <button class="btn btn-dark" type="submit">Login</button><br/><br/>
                         </Form>
                         
                         <Link to="/signup">
-                            <Button> Create Your Account Today! </Button>
+                            <button class="btn btn-dark"> Create Account </button>
                         </Link>
                     </Modal.Body>
                 </Modal.Dialog> 

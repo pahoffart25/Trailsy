@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from "react-router-dom"
 import Iframe from 'react-iframe'
 import { Button } from "react-bootstrap"
-// import TripCarousel from "./TripCarousel"
+import TripCarousel from "./TripCarousel"
 
 
 class Profile extends Component {
@@ -14,14 +14,14 @@ class Profile extends Component {
                 <br/><h2>Hey {this.props.user.name}!</h2><br/>
 
                     <Link to="/trip-form"> 
-                        <Button  variant="primary">New Trip!</Button><br/><br/>
+                        <button  class="btn btn-dark">Add Trip!</button><br/><br/>
                     </Link>  
 
 
                 </div><br/>
 
                 <div>
-                    {/* <TripCarousel/> */}
+                    <TripCarousel/>
                 </div><br/>
 
             </div>

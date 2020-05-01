@@ -40,9 +40,9 @@ class UsersCards extends Component {
                                         </Card.Text>
                                             {
                                                 this.props.user.user.followed_users.find(f => f.id === user.id ) ?
-                                                <Button disabled> Followed </Button>
+                                                <button class="btn btn-dark" disabled> Followed </button>
                                                 :
-                                                <Button onClick={() => this.follow(user)} variant="primary">Follow!</Button> 
+                                                <button onClick={() => this.follow(user)} class="btn btn-dark">Follow!</button> 
                                             }
                                     </Card.Body>
                                 </Card><br/> 

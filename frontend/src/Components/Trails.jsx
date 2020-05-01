@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Card, ListGroup, Image } from "react-bootstrap"
+import { FaStar } from "react-icons/fa"
 import Iframe from 'react-iframe'
 
 
@@ -18,6 +19,27 @@ class Trails extends Component {
         };
     }
 
+     handleChange = address => {
+        this.setState({ address});
+    };
+    
+    handleSelect = address => {
+        this.setState({ address});
+        geocodeByAddress(address)
+            .then(results => getLatLng(results[0]))
+            .then(latLng => {
+                this.fetchTrails(`${latLng['lat']}`, `${latLng['lng']}`);
+                console.log(latLng['lat'], latLng['lng'])
+                var d = .017453292519943295,  f = 6378137, c = .7853981633974483;
+                var x = f * latLng['lng'] * d;
+                var y = f * Math.log(Math.tan(c + latLng['lat'] * d / 2));
+                this.setState({mapPosition : `https://www.hikingproject.com/widget/map?favs=1&location=fixed&x=${x}&y=${y}&z=11.5&h=500`})
+                console.log(x,y);
+            })
+            .catch(error => console.error('Error', error));
+    };
+
+
     
 
     fetchTrails = (lat, lon) => {
@@ -29,23 +51,13 @@ class Trails extends Component {
         .then(res => this.props.dispatch({ type: "FETCH_TRAILS", data: res }))
     }
 
-    componentDidMount() {
-        this.fetchTrails("29.7604", "-95.3880")
-    }
-
     difficultyImg = (t) => {
         switch(t.difficulty) {
             case "green":
                 return "https://cdn.apstatic.com/img/diff/green.svg"
 
-            case "greenBlue":
-                return "https://cdn.apstatic.com/img/diff/greenBlue.svg"
-
             case "blue":
                 return "https://cdn.apstatic.com/img/diff/blue.svg"
-
-            case "blueBlack":
-                return "https://cdn.apstatic.com/img/diff/blueBlack.svg"
 
             case "black":
                 return "https://cdn.apstatic.com/img/diff/black.svg"
@@ -78,7 +90,7 @@ class Trails extends Component {
                         <Card.Text>{t.location} </Card.Text>
                         <Card.Text id="trail-summary">{t.summary} </Card.Text>
                         <ListGroup variant="flush">
-                            <ListGroup.Item>Stars: {t.stars}</ListGroup.Item>
+                            <ListGroup.Item> {t.stars} <FaStar/></ListGroup.Item>
                             <ListGroup.Item>Length: {t.length} miles</ListGroup.Item>
                             <ListGroup.Item>High: {t.high} ft, Low: {t.low} ft</ListGroup.Item>
                             <ListGroup.Item id="trail-difficulty">Difficulty: <Image style={{'borderRadius':'4px' }}src={this.difficultyImg(t)}/></ListGroup.Item>
@@ -102,7 +114,46 @@ class Trails extends Component {
                 <Iframe title="trails-map" className="trails-map" frameborder="0" scrolling="yes" 
                     src={this.state.mapPosition}>
                 </Iframe>
-              {/* here */}
+                 <div className = "LocationSearchInput">
+                    <PlacesAutocomplete
+                        value={this.state.address}
+                        onChange={this.handleChange}
+                        onSelect={this.handleSelect}
+                    >
+                        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+                        <div>
+                            <input
+                            {...getInputProps({
+                                placeholder: 'Search Places ...',
+                                className: 'location-search-input',
+                            })}
+                            />
+                            <div className="autocomplete-dropdown-container">
+                            {loading && <div>Loading...</div>}
+                            {suggestions.map(suggestion => {
+                                const className = suggestion.active
+                                ? 'suggestion-item--active'
+                                : 'suggestion-item';
+                                const style = suggestion.active
+                                ? { backgroundColor: '#fafafa', cursor: 'pointer' }
+                                : { backgroundColor: '#ffffff', cursor: 'pointer' };
+                                return (
+                                <div
+                                    {...getSuggestionItemProps(suggestion, {
+                                    className,
+                                    style,
+                                    })}
+                                >
+                                    <span>{suggestion.description}</span>
+                                </div>
+                                );
+                            })}
+                            </div>
+                        </div>
+                        )}
+                    </PlacesAutocomplete>
+                </div>
+
                 {this.renderTrails()}
             </div>
         )

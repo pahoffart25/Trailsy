@@ -72,13 +72,13 @@ class NavExample extends React.Component {
                 <Fragment>
                   <NavItem>
                     <NavLink active href="/follower-feed">
-                      Follower Feed
+                      Feed
                     </NavLink>
                   </NavItem>
 
                   <NavItem>
                     <NavLink active href="/all-users">
-                      All Users
+                       Users
                     </NavLink>
                   </NavItem>
                   
