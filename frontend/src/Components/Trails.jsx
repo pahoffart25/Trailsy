@@ -51,6 +51,10 @@ class Trails extends Component {
         .then(res => this.props.dispatch({ type: "FETCH_TRAILS", data: res }))
     }
 
+    componentDidMount() {
+        this.fetchTrails('29.7184', '-95.3698')
+    }
+
     difficultyImg = (t) => {
         switch(t.difficulty) {
             case "green":
